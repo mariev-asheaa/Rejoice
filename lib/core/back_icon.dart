@@ -9,7 +9,7 @@ class BackIcon extends StatelessWidget {
       Navigator.pop(context);
     }, icon: Padding(
       padding: const EdgeInsets.all(16),
-      child: Icon(Icons.arrow_back_ios,size: 30,),
+      child: Icon(Icons.arrow_back_ios,size: 25,),
     )
     );
   }

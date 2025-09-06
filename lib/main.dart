@@ -1,10 +1,15 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:efraho/core/back_icon.dart';
+import 'package:efraho/core/constants.dart';
 import 'package:efraho/features/camp/presentation/views/camp_view.dart';
+import 'package:efraho/features/camp/presentation/views/vibes_view.dart';
 import 'package:efraho/features/contact/presentation/views/contact_view.dart';
 import 'package:efraho/features/splash/views/splash_view.dart';
+import 'package:efraho/features/teams/presentation/views/members_view.dart';
+import 'package:efraho/features/teams/presentation/views/teams_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
+import 'features/camp/presentation/views/stations_view.dart';
 import 'features/home/presentaion/views/home_view.dart';
 import 'generated/l10n.dart';
 
@@ -33,14 +38,18 @@ class Efraho extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         appBarTheme: AppBarTheme(
-          backgroundColor: Color(0xffFAF2E7),
+          backgroundColor: kBackgroundColor,
         ),
-    scaffoldBackgroundColor: Color(0xffFAF2E7),
+    scaffoldBackgroundColor: kBackgroundColor
       ),
       routes: {
         HomeView.routeName: (context) => const HomeView(),
         ContactView.routName:(context) => const ContactView(),
         CampView.routeName:(context) => const CampView(),
+        VibesView.routeName:(context) => const VibesView(),
+        StationsView.routeName:(context) => const StationsView(),
+        TeamsView.routeName:(context) => const TeamsView(),
+        MembersView.routeName:(context) => const MembersView(),
       },
       home: SplashView(),
     );

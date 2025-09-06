@@ -10,15 +10,16 @@ class Assets {
   static const String imagesContact = 'assets/images/contact.png';
   static const String imagesCross = 'assets/images/cross.png';
   static const String imagesEfrahoLogo = 'assets/images/EfrahoLogo.jpeg';
-  static const String imagesMicrophone = 'assets/images/microphone.png';
+  static const String imagesGoodvibes = 'assets/images/goodvibes.png';
   static const String imagesMultitasking = 'assets/images/multitasking.png';
   static const String imagesMusic = 'assets/images/music.png';
   static const String imagesMusicNote = 'assets/images/music-note.png';
   static const String imagesMusicNotes = 'assets/images/music-notes.png';
   static const String imagesPraying = 'assets/images/praying.png';
+  static const String imagesStation = 'assets/images/station.png';
+  static const String imagesTeams = 'assets/images/teams.png';
   static const String imagesTheaterMask = 'assets/images/theater-mask.png';
   static const String imagesTimetable = 'assets/images/timetable.png';
-  static const String imagesTrain = 'assets/images/train.png';
   static const String imagesVoiceRecord = 'assets/images/voice-record.png';
   static const String imagesWorkshop = 'assets/images/workshop.png';
 

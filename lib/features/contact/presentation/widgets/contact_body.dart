@@ -48,6 +48,7 @@ class ContactBody extends StatelessWidget {
                  mainAxisAlignment: MainAxisAlignment.end,
                  children: [
                    Container(
+                     width: 180,
                      padding: EdgeInsets.all(8),
                      decoration: BoxDecoration(
                          borderRadius: BorderRadius.circular(10),

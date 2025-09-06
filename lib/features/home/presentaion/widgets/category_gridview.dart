@@ -1,6 +1,7 @@
 import 'package:efraho/features/camp/presentation/views/camp_view.dart';
 import 'package:efraho/features/contact/presentation/views/contact_view.dart';
 import 'package:efraho/features/home/presentaion/widgets/category_item.dart';
+import 'package:efraho/features/teams/presentation/views/teams_view.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../../../../generated/assets.dart';
@@ -25,6 +26,9 @@ class CategoryGridview extends StatelessWidget {
       },),
       CategoryItem(text: 'التواصل', image: Assets.imagesContact, onTap: () {
         Navigator.pushNamed(context, ContactView.routName);
+      },),
+      CategoryItem(text: 'الفرق', image: Assets.imagesTeams, onTap: () {
+        Navigator.pushNamed(context, TeamsView.routeName);
       },)
     ];
     return GridView.builder(
