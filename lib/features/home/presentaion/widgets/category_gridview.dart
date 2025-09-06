@@ -19,7 +19,7 @@ class CategoryGridview extends StatelessWidget {
 
       },),
       CategoryItem(text: 'المؤتمر', image: Assets.imagesTimetable, onTap: () {
-      Navigator.pushNamed(context, CampView.routeName);
+      Navigator.pushNamed(context,CampView.routeName);
       },),
       CategoryItem(text: 'الترانيم', image: Assets.imagesMusic, onTap: () {
 

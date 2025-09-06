@@ -1,5 +1,5 @@
-import 'package:efraho/core/constants.dart';
-import 'package:efraho/core/url_launcher.dart';
+import 'package:efraho/core/utils/constants.dart';
+import 'package:efraho/core/helper-function/url_launcher.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../generated/assets.dart';

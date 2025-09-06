@@ -1,8 +1,9 @@
 
+import 'package:efraho/features/teams/presentation/widgets/teams_body.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
-import '../../../../core/constants.dart';
+import '../../../../core/utils/constants.dart';
 import 'home_body.dart';
 
 class ButtonNavBar extends StatefulWidget {
@@ -24,36 +25,27 @@ class _ButtonNavBarState extends State<ButtonNavBar> {
   List<Widget> _buildScreens() {
     return [
       HomeBody(),
-      const Center(child: Text('Workout')),
-      const Center(child: Text('Chat')),
-      const Center(child: Text('Food')),
-      const Center(child: Text('Menu')),
+      TeamsBody(),
+      const Center(child: Text('Members')),
     ];
   }
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       PersistentBottomNavBarItem(
+        title: 'Home',
         icon: Icon(Icons.home),
         activeColorPrimary: kPrimaryColor,
         inactiveColorPrimary: Colors.grey,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.add),
+        title: 'Teams',
+        icon: Icon(Icons.groups),
         activeColorPrimary: kPrimaryColor,
         inactiveColorPrimary: Colors.grey,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.add),
-        activeColorPrimary: kPrimaryColor,
-        inactiveColorPrimary: Colors.grey,
-      ),
-      PersistentBottomNavBarItem(
-        icon: Icon(Icons.add),
-        activeColorPrimary: kPrimaryColor,
-        inactiveColorPrimary: Colors.grey,
-      ),
-      PersistentBottomNavBarItem(
-        icon: Icon(Icons.menu),
+        title: 'Members',
+        icon: Icon(Icons.person),
         activeColorPrimary: kPrimaryColor,
         inactiveColorPrimary: Colors.grey,
       ),
@@ -67,7 +59,7 @@ class _ButtonNavBarState extends State<ButtonNavBar> {
       controller: _controller,
       screens: _buildScreens(),
       items: _navBarsItems(),
-      navBarStyle: NavBarStyle.style6,
+      navBarStyle: NavBarStyle.style3,
     );
   }
 }

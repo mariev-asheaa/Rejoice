@@ -1,7 +1,7 @@
 import 'package:efraho/features/camp/presentation/widgets/stations_body.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/back_icon.dart';
+import '../../../../core/utils/back_icon.dart';
 
 class StationsView extends StatelessWidget {
   const StationsView({super.key});

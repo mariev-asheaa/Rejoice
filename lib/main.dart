@@ -1,19 +1,26 @@
 import 'package:device_preview/device_preview.dart';
-import 'package:efraho/core/back_icon.dart';
-import 'package:efraho/core/constants.dart';
+import 'package:efraho/core/utils/constants.dart';
 import 'package:efraho/features/camp/presentation/views/camp_view.dart';
 import 'package:efraho/features/camp/presentation/views/vibes_view.dart';
 import 'package:efraho/features/contact/presentation/views/contact_view.dart';
 import 'package:efraho/features/splash/views/splash_view.dart';
 import 'package:efraho/features/teams/presentation/views/members_view.dart';
 import 'package:efraho/features/teams/presentation/views/teams_view.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'core/services/shared_prefrences_singelton.dart';
 import 'features/camp/presentation/views/stations_view.dart';
 import 'features/home/presentaion/views/home_view.dart';
+import 'firebase_options.dart';
 import 'generated/l10n.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Prefs.init();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(
       DevicePreview(
       enabled: true,

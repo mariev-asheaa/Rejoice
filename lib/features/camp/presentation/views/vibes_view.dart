@@ -1,4 +1,4 @@
-import 'package:efraho/core/back_icon.dart';
+import 'package:efraho/core/utils/back_icon.dart';
 import 'package:efraho/features/camp/presentation/widgets/vibes_body.dart';
 import 'package:flutter/material.dart';
 

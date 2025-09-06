@@ -1,4 +1,4 @@
-import 'package:efraho/core/constants.dart';
+import 'package:efraho/core/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 import '../../../generated/assets.dart';

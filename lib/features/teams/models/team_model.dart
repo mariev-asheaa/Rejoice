@@ -10,4 +10,11 @@ class TeamModel{
   final String score;
 
   TeamModel({required this.color, required this.text, required this.members, required this.score});
+
+  Map<String, dynamic> toMap() {
+    return {
+      "name": text,
+      "score": score,
+    };
+  }
 }
