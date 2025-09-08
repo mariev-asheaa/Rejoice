@@ -1,87 +1,62 @@
-import 'package:efraho/features/teams/models/member_model.dart';
-import 'package:efraho/features/teams/models/team_model.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:efraho/features/teams/presentation/views/members_view.dart';
 import 'package:efraho/features/teams/presentation/widgets/teams_card.dart';
-import 'package:flutter/material.dart';
 
-class TeamsBody extends StatelessWidget {
+import '../cubits/teams_cubit.dart';
+
+class TeamsBody extends StatefulWidget {
   const TeamsBody({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final List<TeamModel> teams = [
-      TeamModel(
-        color: Colors.red,
-        text: 'الفريق الاحمر',
-        score: '0',
-        members: [
-          MemberModel(name: 'ماريف اشعياء', score: '12'),
-          MemberModel(name: 'مينا مجدى', score: '9'),
-        ],
-      ),
-      TeamModel(
-        color: Colors.blue,
-        text: 'الفريق الازرق',
-        score: '0',
-        members: [
-          MemberModel(name: 'سارة يوسف', score: '14'),
-          MemberModel(name: 'مينا مجدي', score: '10'),
-        ],
-      ),
-      TeamModel(
-        color: Colors.yellow,
-        text: 'الفريق الاصفر',
-        score: '0',
-        members: [
-          MemberModel(name: 'سارة يوسف', score: '14'),
-          MemberModel(name: 'مينا مجدي', score: '10'),
-        ],
-      ),
-      TeamModel(
-        color: Colors.purple,
-        text: 'الفريق البنفسجى',
-        score: '0',
-        members: [
-          MemberModel(name: 'سارة يوسف', score: '14'),
-          MemberModel(name: 'مينا مجدي', score: '10'),
-        ],
-      ),
-      TeamModel(
-        color: Colors.orange,
-        text: 'الفريق الاورانج',
-        score: '0',
-        members: [
-          MemberModel(name: 'سارة يوسف', score: '14'),
-          MemberModel(name: 'مينا مجدي', score: '10'),
-        ],
-      ),
-      TeamModel(
-        color: Colors.green,
-        text: 'الفريق الاخضر',
-        score: '0',
-        members: [
-          MemberModel(name: 'سارة يوسف', score: '14'),
-          MemberModel(name: 'مينا مجدي', score: '10'),
-        ],
-      ),
-    ];
+  State<TeamsBody> createState() => _TeamsBodyState();
+}
 
+class _TeamsBodyState extends State<TeamsBody> {
+  @override
+  void initState() {
+    context.read<TeamsCubit>().fetchTeams("2025");
+    super.initState();
+  }
+  @override
+  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 22),
-      child: GridView.builder(
-          itemCount: teams.length,
-          gridDelegate:
-          const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            childAspectRatio: .7,
-          ),
-          itemBuilder: (BuildContext context, int index) {
-            return InkWell(
-                onTap: (){
-                  Navigator.pushNamed(context, MembersView.routeName, arguments: teams[index].members,);
-                },
-                child: TeamsCard(teamModel: teams[index]));
+      child: BlocBuilder<TeamsCubit, TeamsState>(
+        builder: (context, state) {
+          if (state is TeamsLoading) {
+            return const Center(child: CircularProgressIndicator());
+          } else if (state is TeamsSuccess) {
+            return GridView.builder(
+              itemCount: state.teams.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: .7,
+              ),
+              itemBuilder: (BuildContext context, int index) {
+                return InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => MembersView(
+                          teamId: state.teams[index].id,
+                          members: state.teams[index].members,
+                        ),
+                      ),
+                    );
+
+                  },
+                  child: TeamsCard(teamModel: state.teams[index]),
+                );
+              },
+            );
+          } else if (state is TeamsError) {
+            return Center(child: Text("Error: ${state.message}"));
+          } else {
+            return const SizedBox.shrink();
           }
+        },
       ),
     );
   }

@@ -8,7 +8,7 @@ class BackIcon extends StatelessWidget {
     return IconButton(onPressed: (){
       Navigator.pop(context);
     }, icon: Padding(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Icon(Icons.arrow_back_ios,size: 25,),
     )
     );

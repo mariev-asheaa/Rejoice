@@ -1,10 +1,11 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:efraho/core/utils/constants.dart';
 import 'package:efraho/features/camp/presentation/views/camp_view.dart';
+import 'package:efraho/features/camp/presentation/views/competition_view.dart';
 import 'package:efraho/features/camp/presentation/views/vibes_view.dart';
 import 'package:efraho/features/contact/presentation/views/contact_view.dart';
+import 'package:efraho/features/program/presentation/views/program_view.dart';
 import 'package:efraho/features/splash/views/splash_view.dart';
-import 'package:efraho/features/teams/presentation/views/members_view.dart';
 import 'package:efraho/features/teams/presentation/views/teams_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -56,8 +57,9 @@ class Efraho extends StatelessWidget {
         VibesView.routeName:(context) => const VibesView(),
         StationsView.routeName:(context) => const StationsView(),
         TeamsView.routeName:(context) => const TeamsView(),
-        MembersView.routeName:(context) => const MembersView(),
-      },
+        ProgramView.routeName:(context) => const ProgramView(),
+        CompetitionView.routeName:(context) => const CompetitionView(),
+         },
       home: SplashView(),
     );
   }

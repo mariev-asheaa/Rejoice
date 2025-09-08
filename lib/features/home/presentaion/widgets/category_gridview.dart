@@ -1,6 +1,7 @@
 import 'package:efraho/features/camp/presentation/views/camp_view.dart';
 import 'package:efraho/features/contact/presentation/views/contact_view.dart';
 import 'package:efraho/features/home/presentaion/widgets/category_item.dart';
+import 'package:efraho/features/program/presentation/views/program_view.dart';
 import 'package:efraho/features/teams/presentation/views/teams_view.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -13,7 +14,7 @@ class CategoryGridview extends StatelessWidget {
   Widget build(BuildContext context) {
     List<CategoryItem>categories=[
       CategoryItem(text: 'البرنامج', image: Assets.imagesMultitasking, onTap: () {
-
+        Navigator.pushNamed(context,ProgramView.routeName);
       },),
       CategoryItem(text: 'الشعار', image: Assets.imagesMusicNotes, onTap: () {
 

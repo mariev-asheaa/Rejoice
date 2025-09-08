@@ -10,7 +10,6 @@ class FireStoreService {
     final teams = [
       {
         "name": "الفريق الأحمر",
-        "color": "red",
         "score": 0,
         "members": [
           {"name": "ماريف اشعياء", "score": 0},
@@ -19,7 +18,6 @@ class FireStoreService {
       },
       {
         "name": "الفريق الأزرق",
-        "color": "blue",
         "score": 0,
         "members": [
           {"name": "سارة يوسف", "score": 0},
@@ -33,7 +31,6 @@ class FireStoreService {
 
       await teamRef.set({
         "name": team["name"],
-        "color": team["color"],
         "score": team["score"],
       });
 
@@ -42,28 +39,5 @@ class FireStoreService {
       }
     }
   }
-
-
-  Future<void> updateTeamScore(String conferenceId, String teamId, int newScore) async {
-    await _db
-        .collection("conferences")
-        .doc(conferenceId)
-        .collection("teams")
-        .doc(teamId)
-        .update({"score": newScore});
-  }
-
-
-  Future<void> updateMemberScore(String conferenceId, String teamId, String memberId, int newScore) async {
-    await _db
-        .collection("conferences")
-        .doc(conferenceId)
-        .collection("teams")
-        .doc(teamId)
-        .collection("members")
-        .doc(memberId)
-        .update({"score": newScore});
-  }
-
 
 }

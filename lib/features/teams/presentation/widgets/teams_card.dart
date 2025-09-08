@@ -1,11 +1,11 @@
 import 'package:efraho/features/teams/models/team_model.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/services/shared_prefrences_singelton.dart';
+import '../cubits/teams_cubit.dart';
 
 class TeamsCard extends StatelessWidget {
-
-  const TeamsCard({super.key,required this.teamModel,});
+  const TeamsCard({super.key, required this.teamModel});
   final TeamModel teamModel;
 
   @override
@@ -38,13 +38,13 @@ class TeamsCard extends StatelessWidget {
                 ),
               ),
 
-
               if (Prefs.isOwner)
                 Positioned(
                   top: 8,
                   right: 8,
                   child: IconButton(
-                    icon: const Icon(Icons.add_circle, color: Colors.white,size: 30,),
+                    icon: const Icon(Icons.add_circle,
+                        color: Colors.white, size: 30),
                     onPressed: () {
                       _showAddPointsDialog(context, teamModel);
                     },
@@ -72,6 +72,7 @@ class TeamsCard extends StatelessWidget {
 
   void _showAddPointsDialog(BuildContext context, TeamModel team) {
     final TextEditingController controller = TextEditingController();
+
     showDialog(
       context: context,
       builder: (_) => AlertDialog(
@@ -90,6 +91,15 @@ class TeamsCard extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {
+              final int? points = int.tryParse(controller.text);
+              if (points != null) {
+                final newScore = team.score + points;
+                context.read<TeamsCubit>().updateTeamScore(
+                  '2025',
+                  team.id,
+                  newScore,
+                );
+              }
               Navigator.pop(context);
             },
             child: const Text("Add"),
@@ -98,4 +108,5 @@ class TeamsCard extends StatelessWidget {
       ),
     );
   }
+
 }
