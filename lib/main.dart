@@ -2,6 +2,8 @@ import 'package:device_preview/device_preview.dart';
 import 'package:efraho/core/utils/constants.dart';
 import 'package:efraho/features/camp/presentation/views/camp_view.dart';
 import 'package:efraho/features/camp/presentation/views/competition_view.dart';
+import 'package:efraho/features/camp/presentation/views/night_prayers_view.dart';
+import 'package:efraho/features/camp/presentation/views/savers_view.dart';
 import 'package:efraho/features/camp/presentation/views/vibes_view.dart';
 import 'package:efraho/features/contact/presentation/views/contact_view.dart';
 import 'package:efraho/features/program/presentation/views/program_view.dart';
@@ -61,6 +63,8 @@ class Efraho extends StatelessWidget {
         ProgramView.routeName:(context) => const ProgramView(),
         CompetitionView.routeName:(context) => const CompetitionView(),
         SloganView.routeName:(context) => const SloganView(),
+        SaversView.routeName:(context) => const SaversView(),
+        NightPrayersView.routeName:(context) => const NightPrayersView(),
          },
       home: SplashView(),
     );

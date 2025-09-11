@@ -1,4 +1,6 @@
 import 'package:efraho/features/camp/presentation/views/competition_view.dart';
+import 'package:efraho/features/camp/presentation/views/night_prayers_view.dart';
+import 'package:efraho/features/camp/presentation/views/savers_view.dart';
 import 'package:efraho/features/camp/presentation/views/stations_view.dart';
 import 'package:efraho/features/camp/presentation/views/vibes_view.dart';
 import 'package:flutter/cupertino.dart';
@@ -19,7 +21,7 @@ class CampGridview extends StatelessWidget {
       CampCategory(text: 'حفله سمر', image: Assets.imagesTheaterMask, onTap: (){}),
       CampCategory(text: 'ميديا و راديو', image: Assets.imagesVoiceRecord, onTap: (){}),
       CampCategory(text: 'محفوظات', image: Assets.imagesPrayers, onTap: (){
-
+        Navigator.pushNamed(context, SaversView.routeName);
       }),
       CampCategory(text: 'مسابقات', image: Assets.imagesCompetitive, onTap: (){
         Navigator.pushNamed(context, CompetitionView.routeName);
@@ -28,7 +30,9 @@ class CampGridview extends StatelessWidget {
         Navigator.pushNamed(context, StationsView.routeName);
       }),
       CampCategory(text: 'قداس و تسبحة', image: Assets.imagesCross, onTap: (){}),
-      CampCategory(text: 'أمسية طقسية', image: Assets.imagesPraying, onTap: (){}),
+      CampCategory(text: 'أمسية طقسية', image: Assets.imagesPraying, onTap: (){
+        Navigator.pushNamed(context, NightPrayersView.routeName);
+      }),
       CampCategory(text: 'Workshop', image: Assets.imagesWorkshop, onTap: (){}),
     ];
     return GridView.builder(
