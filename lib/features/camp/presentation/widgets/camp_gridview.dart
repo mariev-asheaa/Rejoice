@@ -1,3 +1,4 @@
+import 'package:efraho/features/camp/presentation/views/bible_study_view.dart';
 import 'package:efraho/features/camp/presentation/views/competition_view.dart';
 import 'package:efraho/features/camp/presentation/views/night_prayers_view.dart';
 import 'package:efraho/features/camp/presentation/views/savers_view.dart';
@@ -14,7 +15,9 @@ class CampGridview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<CampCategory>campCategories=[
-      CampCategory(text: 'درس كتاب', image: Assets.imagesBook, onTap: (){}),
+      CampCategory(text: 'درس كتاب', image: Assets.imagesBook, onTap: (){
+        Navigator.pushNamed(context, BibleStudyView.routeName);
+      }),
       CampCategory(text: 'إعلامية', image: Assets.imagesGoodvibes, onTap: (){
        Navigator.pushNamed(context, VibesView.routeName);
       }),
