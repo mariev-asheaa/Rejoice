@@ -2,6 +2,7 @@ import 'package:efraho/features/camp/presentation/views/camp_view.dart';
 import 'package:efraho/features/contact/presentation/views/contact_view.dart';
 import 'package:efraho/features/home/presentaion/widgets/category_item.dart';
 import 'package:efraho/features/program/presentation/views/program_view.dart';
+import 'package:efraho/features/slogan/presentation/views/slogan_view.dart';
 import 'package:efraho/features/teams/presentation/views/teams_view.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -17,7 +18,7 @@ class CategoryGridview extends StatelessWidget {
         Navigator.pushNamed(context,ProgramView.routeName);
       },),
       CategoryItem(text: 'الشعار', image: Assets.imagesMusicNotes, onTap: () {
-
+        Navigator.pushNamed(context,SloganView.routeName);
       },),
       CategoryItem(text: 'المؤتمر', image: Assets.imagesTimetable, onTap: () {
       Navigator.pushNamed(context,CampView.routeName);

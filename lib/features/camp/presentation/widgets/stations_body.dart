@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
+import '../../../../core/utils/gradient_body_background.dart';
+
 class StationsBody extends StatelessWidget {
   const StationsBody({super.key});
 
@@ -12,23 +14,6 @@ class StationsBody extends StatelessWidget {
 📍 ماتسيبش نفسك تفوت stations efr7o  
 
 ''';
-    return Directionality(
-      textDirection: TextDirection.rtl,
-      child: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: SingleChildScrollView(
-          child: Text(
-            arabicText,
-            style: const TextStyle(
-              fontSize: 20,
-              height: 1.6,
-              fontWeight: FontWeight.w500,
-            ),
-            textAlign: TextAlign.start,
-          ),
-        ),
-      ),
-
-    );
+    return GradientBodyBackground(arabicText: arabicText);
   }
 }

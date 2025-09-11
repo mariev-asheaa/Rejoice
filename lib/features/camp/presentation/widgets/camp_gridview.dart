@@ -17,9 +17,10 @@ class CampGridview extends StatelessWidget {
        Navigator.pushNamed(context, VibesView.routeName);
       }),
       CampCategory(text: 'حفله سمر', image: Assets.imagesTheaterMask, onTap: (){}),
-      CampCategory(text: 'المزامير', image: Assets.imagesMusicNote, onTap: (){}),
       CampCategory(text: 'ميديا و راديو', image: Assets.imagesVoiceRecord, onTap: (){}),
-      CampCategory(text: 'محفوظات', image: Assets.imagesPrayers, onTap: (){}),
+      CampCategory(text: 'محفوظات', image: Assets.imagesPrayers, onTap: (){
+
+      }),
       CampCategory(text: 'مسابقات', image: Assets.imagesCompetitive, onTap: (){
         Navigator.pushNamed(context, CompetitionView.routeName);
       }),

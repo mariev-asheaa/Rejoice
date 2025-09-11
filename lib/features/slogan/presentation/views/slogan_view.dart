@@ -1,12 +1,13 @@
-import 'package:efraho/features/camp/presentation/widgets/stations_body.dart';
+import 'package:efraho/core/utils/back_icon.dart';
+import 'package:efraho/features/slogan/presentation/widgets/slogan_body.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/back_icon.dart';
 import '../../../../core/utils/constants.dart';
 
-class StationsView extends StatelessWidget {
-  const StationsView({super.key});
-  static const routeName='stations';
+class SloganView extends StatelessWidget {
+  const SloganView({super.key});
+  static const routeName = 'slogan';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,11 +16,13 @@ class StationsView extends StatelessWidget {
         elevation: 0,
         flexibleSpace: Container(
           decoration: const BoxDecoration(
-              color: gradientAppBarColor
+           color: gradientAppBarColor
           ),
         ),
       ),
-      body: SafeArea(child: StationsBody()),
+      body: const SafeArea(
+        child: SloganBody(),
+      ),
     );
   }
 }

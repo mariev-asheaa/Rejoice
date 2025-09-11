@@ -5,6 +5,7 @@ import 'package:efraho/features/camp/presentation/views/competition_view.dart';
 import 'package:efraho/features/camp/presentation/views/vibes_view.dart';
 import 'package:efraho/features/contact/presentation/views/contact_view.dart';
 import 'package:efraho/features/program/presentation/views/program_view.dart';
+import 'package:efraho/features/slogan/presentation/views/slogan_view.dart';
 import 'package:efraho/features/splash/views/splash_view.dart';
 import 'package:efraho/features/teams/presentation/views/teams_view.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -59,6 +60,7 @@ class Efraho extends StatelessWidget {
         TeamsView.routeName:(context) => const TeamsView(),
         ProgramView.routeName:(context) => const ProgramView(),
         CompetitionView.routeName:(context) => const CompetitionView(),
+        SloganView.routeName:(context) => const SloganView(),
          },
       home: SplashView(),
     );
