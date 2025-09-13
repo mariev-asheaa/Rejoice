@@ -1,4 +1,4 @@
-import 'package:efraho/core/utils/gradient_body_background.dart';
+import 'package:efraho/core/utils/text_views_body.dart';
 import 'package:flutter/material.dart';
 
 class PraiseAndMassBody extends StatelessWidget {
@@ -14,6 +14,6 @@ class PraiseAndMassBody extends StatelessWidget {
 
 ⏳ ماتفوّتش الليلة دي، لأنها هتفضل مطبوعة في قلبك طول العمر 💙
      ''';
-    return GradientBodyBackground(arabicText: arabicText);
+    return TextBody(arabicText: arabicText);
   }
 }

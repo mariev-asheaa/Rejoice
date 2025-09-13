@@ -31,7 +31,7 @@ class _TeamsBodyState extends State<TeamsBody> {
               itemCount: state.teams.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                childAspectRatio: .7,
+                childAspectRatio: .6,
               ),
               itemBuilder: (BuildContext context, int index) {
                 return InkWell(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/gradient_body_background.dart';
+import '../../../../core/utils/text_views_body.dart';
 
 class VibesBody extends StatelessWidget {
   const VibesBody({super.key});
@@ -25,6 +25,6 @@ class VibesBody extends StatelessWidget {
 هدفنا مش مجرد ديكور أو توزيعات، لكن إن كل تفصيلة تعكس رسالة المؤتمر وتوصل للناس بصورة مبهجة وملموسة.
 ''';
 
-    return GradientBodyBackground(arabicText: arabicText);
+    return TextBody(arabicText: arabicText);
   }
 }

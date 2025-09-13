@@ -1,4 +1,5 @@
 import 'package:efraho/core/utils/back_icon.dart';
+import 'package:efraho/core/utils/gradient_body.dart';
 import 'package:efraho/features/camp/presentation/cubits/competition_cubit.dart';
 import 'package:efraho/features/camp/presentation/widgets/competition_body.dart';
 import 'package:flutter/material.dart';
@@ -25,14 +26,7 @@ class CompetitionView extends StatelessWidget {
             ),
           ),
         ),
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xff0d324d), Color(0xff7f5a83)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
-          ),
+        body: GradientBody(
           child: const SafeArea(
             child: CompetitionBody(),
           ),

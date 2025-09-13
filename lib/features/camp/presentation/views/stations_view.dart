@@ -1,3 +1,4 @@
+import 'package:efraho/core/utils/gradient_body.dart';
 import 'package:efraho/features/camp/presentation/widgets/stations_body.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class StationsView extends StatelessWidget {
           ),
         ),
       ),
-      body: SafeArea(child: StationsBody()),
+      body: GradientBody(child: SafeArea(child: StationsBody())),
     );
   }
 }

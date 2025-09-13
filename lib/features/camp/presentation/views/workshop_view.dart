@@ -1,3 +1,4 @@
+import 'package:efraho/core/utils/gradient_body.dart';
 import 'package:efraho/features/camp/presentation/widgets/workshop_body.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class WorkshopView extends StatelessWidget {
           ),
         ),
       ),
-      body: SafeArea(child:WorkshopBody()),
+      body: GradientBody(child: SafeArea(child:WorkshopBody())),
     );
   }
 }

@@ -1,4 +1,4 @@
-import 'package:efraho/core/utils/gradient_body_background.dart';
+import 'package:efraho/core/utils/text_views_body.dart';
 import 'package:flutter/material.dart';
 
 class SloganBody extends StatelessWidget {
@@ -44,6 +44,6 @@ class SloganBody extends StatelessWidget {
 وفي حربي انا هغلب بيك 2
 ''';
 
-    return GradientBodyBackground(arabicText: arabicText);
+    return TextBody(arabicText: arabicText);
   }
 }

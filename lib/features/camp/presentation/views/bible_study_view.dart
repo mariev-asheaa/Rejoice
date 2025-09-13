@@ -1,3 +1,4 @@
+import 'package:efraho/core/utils/gradient_body.dart';
 import 'package:efraho/features/camp/presentation/widgets/bible_study_body.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ static const routeName='bibleStudy';
           ),
         ),
       ),
-      body: SafeArea(child: BibleStudyBody()),
+      body: GradientBody(child: SafeArea(child: BibleStudyBody())),
     );
   }
 }

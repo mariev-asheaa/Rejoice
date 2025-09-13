@@ -1,3 +1,4 @@
+import 'package:efraho/core/utils/gradient_body.dart';
 import 'package:efraho/features/camp/presentation/widgets/party_body.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class PartyView extends StatelessWidget {
           ),
         ),
       ),
-      body: SafeArea(child:PartyBody() ),
+      body: GradientBody(child: SafeArea(child:PartyBody() )),
     );
   }
 }

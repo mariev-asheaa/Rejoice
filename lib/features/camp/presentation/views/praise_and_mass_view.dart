@@ -1,3 +1,4 @@
+import 'package:efraho/core/utils/gradient_body.dart';
 import 'package:efraho/features/camp/presentation/widgets/praise_and_mass_body.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ static const routeName='Praise_Mass';
           ),
         ),
       ),
-      body: SafeArea(child:PraiseAndMassBody()),
+      body: GradientBody(child: SafeArea(child:PraiseAndMassBody())),
     );
   }
 }

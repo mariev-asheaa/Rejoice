@@ -1,4 +1,4 @@
-import 'package:efraho/core/utils/gradient_body_background.dart';
+import 'package:efraho/core/utils/text_views_body.dart';
 import 'package:flutter/material.dart';
 
 class NightPrayersBody extends StatelessWidget {
@@ -34,6 +34,6 @@ class NightPrayersBody extends StatelessWidget {
 تحفيز الشباب على التأمل الشخصي والاقتراب من الله من خلال الطقس.
     ''';
 
-    return const GradientBodyBackground(arabicText: arabicText);
+    return const TextBody(arabicText: arabicText);
   }
 }

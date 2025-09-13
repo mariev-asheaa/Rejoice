@@ -1,4 +1,5 @@
 import 'package:efraho/core/utils/back_icon.dart';
+import 'package:efraho/core/utils/gradient_body.dart';
 import 'package:efraho/features/slogan/presentation/widgets/slogan_body.dart';
 import 'package:flutter/material.dart';
 
@@ -20,8 +21,10 @@ class SloganView extends StatelessWidget {
           ),
         ),
       ),
-      body: const SafeArea(
-        child: SloganBody(),
+      body: GradientBody(
+        child: const SafeArea(
+          child: SloganBody(),
+        ),
       ),
     );
   }

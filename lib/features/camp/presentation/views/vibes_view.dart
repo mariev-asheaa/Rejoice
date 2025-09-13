@@ -1,4 +1,5 @@
 import 'package:efraho/core/utils/back_icon.dart';
+import 'package:efraho/core/utils/gradient_body.dart';
 import 'package:efraho/features/camp/presentation/widgets/vibes_body.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ static const routeName='vibes';
           ),
         ),
       ),
-      body: SafeArea(child: VibesBody()),
+      body: GradientBody(child: SafeArea(child: VibesBody())),
     );
   }
 }

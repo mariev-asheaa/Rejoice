@@ -1,4 +1,4 @@
-import 'package:efraho/core/utils/gradient_body_background.dart';
+import 'package:efraho/core/utils/text_views_body.dart';
 import 'package:flutter/material.dart';
 
 class BibleStudyBody extends StatelessWidget {
@@ -18,6 +18,6 @@ class BibleStudyBody extends StatelessWidget {
 مين مستعد يكتشف الأسرار؟ 🔥
 درس الكتاب في افرحوا ٢٠٢٥… مستنيينكم 🙌
     ''';
-    return const GradientBodyBackground(arabicText: arabicText);
+    return const TextBody(arabicText: arabicText);
   }
 }

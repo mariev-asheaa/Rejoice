@@ -1,3 +1,4 @@
+import 'package:efraho/core/utils/gradient_body.dart';
 import 'package:efraho/features/camp/presentation/widgets/night_prayers_body.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ static const routeName='nightPrayers';
           ),
         ),
       ),
-      body: SafeArea(child: NightPrayersBody()),
+      body: GradientBody(child: SafeArea(child: NightPrayersBody())),
     );
   }
 }

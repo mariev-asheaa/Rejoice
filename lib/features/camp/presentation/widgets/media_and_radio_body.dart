@@ -1,4 +1,4 @@
-import 'package:efraho/core/utils/gradient_body_background.dart';
+import 'package:efraho/core/utils/text_views_body.dart';
 import 'package:flutter/material.dart';
 
 class MediaAndRadioBody extends StatelessWidget {
@@ -14,6 +14,6 @@ class MediaAndRadioBody extends StatelessWidget {
 📌 خليكوا جاهزين للفقرة دي… لأنها هتكون لمستكم الخاصة اللي هتسيب أثر في المؤتمر 🎶🎬
 
  ''';
-    return GradientBodyBackground(arabicText: arabicText);
+    return TextBody(arabicText: arabicText);
   }
 }

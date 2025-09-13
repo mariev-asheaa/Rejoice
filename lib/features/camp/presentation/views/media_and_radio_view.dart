@@ -1,3 +1,4 @@
+import 'package:efraho/core/utils/gradient_body.dart';
 import 'package:efraho/features/camp/presentation/widgets/media_and_radio_body.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ static const routeName='mediaAndRadio';
           ),
         ),
       ),
-      body: const SafeArea(child: MediaAndRadioBody()),
+      body: GradientBody(child: const SafeArea(child: MediaAndRadioBody())),
     );
   }
 }

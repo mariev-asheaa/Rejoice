@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-import '../../../../core/utils/gradient_body_background.dart';
+import '../../../../core/utils/text_views_body.dart';
 
 class StationsBody extends StatelessWidget {
   const StationsBody({super.key});
@@ -14,6 +14,6 @@ class StationsBody extends StatelessWidget {
 📍 ماتسيبش نفسك تفوت stations efr7o  
 
 ''';
-    return GradientBodyBackground(arabicText: arabicText);
+    return TextBody(arabicText: arabicText);
   }
 }
