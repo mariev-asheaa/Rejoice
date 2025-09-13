@@ -1,4 +1,5 @@
 import 'package:efraho/features/camp/presentation/views/camp_view.dart';
+import 'package:efraho/features/carols/presentation/views/carol_view.dart';
 import 'package:efraho/features/contact/presentation/views/contact_view.dart';
 import 'package:efraho/features/home/presentaion/widgets/category_item.dart';
 import 'package:efraho/features/program/presentation/views/program_view.dart';
@@ -24,7 +25,7 @@ class CategoryGridview extends StatelessWidget {
       Navigator.pushNamed(context,CampView.routeName);
       },),
       CategoryItem(text: 'الترانيم', image: Assets.imagesMusic, onTap: () {
-
+        Navigator.pushNamed(context,CarolView.routeName);
       },),
       CategoryItem(text: 'التواصل', image: Assets.imagesContact, onTap: () {
         Navigator.pushNamed(context, ContactView.routName);

@@ -16,6 +16,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'core/services/shared_prefrences_singelton.dart';
 import 'features/camp/presentation/views/stations_view.dart';
+import 'features/carols/presentation/views/carol_view.dart';
 import 'features/home/presentaion/views/home_view.dart';
 import 'firebase_options.dart';
 import 'generated/l10n.dart';
@@ -67,6 +68,7 @@ class Efraho extends StatelessWidget {
         SaversView.routeName:(context) => const SaversView(),
         NightPrayersView.routeName:(context) => const NightPrayersView(),
         BibleStudyView.routeName:(context) => const BibleStudyView(),
+        CarolView.routeName:(context) => const CarolView(),
          },
       home: SplashView(),
     );
