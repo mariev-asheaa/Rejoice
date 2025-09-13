@@ -3,6 +3,7 @@ import 'package:efraho/core/utils/constants.dart';
 import 'package:efraho/features/camp/presentation/views/bible_study_view.dart';
 import 'package:efraho/features/camp/presentation/views/camp_view.dart';
 import 'package:efraho/features/camp/presentation/views/competition_view.dart';
+import 'package:efraho/features/camp/presentation/views/media_and_radio_view.dart';
 import 'package:efraho/features/camp/presentation/views/night_prayers_view.dart';
 import 'package:efraho/features/camp/presentation/views/savers_view.dart';
 import 'package:efraho/features/camp/presentation/views/vibes_view.dart';
@@ -69,6 +70,7 @@ class Efraho extends StatelessWidget {
         NightPrayersView.routeName:(context) => const NightPrayersView(),
         BibleStudyView.routeName:(context) => const BibleStudyView(),
         CarolView.routeName:(context) => const CarolView(),
+        MediaAndRadioView.routeName:(context) => const MediaAndRadioView(),
          },
       home: SplashView(),
     );

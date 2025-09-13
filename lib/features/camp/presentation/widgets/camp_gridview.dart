@@ -1,5 +1,6 @@
 import 'package:efraho/features/camp/presentation/views/bible_study_view.dart';
 import 'package:efraho/features/camp/presentation/views/competition_view.dart';
+import 'package:efraho/features/camp/presentation/views/media_and_radio_view.dart';
 import 'package:efraho/features/camp/presentation/views/night_prayers_view.dart';
 import 'package:efraho/features/camp/presentation/views/savers_view.dart';
 import 'package:efraho/features/camp/presentation/views/stations_view.dart';
@@ -22,7 +23,9 @@ class CampGridview extends StatelessWidget {
        Navigator.pushNamed(context, VibesView.routeName);
       }),
       CampCategory(text: 'حفله سمر', image: Assets.imagesTheaterMask, onTap: (){}),
-      CampCategory(text: 'ميديا و راديو', image: Assets.imagesVoiceRecord, onTap: (){}),
+      CampCategory(text: 'ميديا و راديو', image: Assets.imagesVoiceRecord, onTap: (){
+        Navigator.pushNamed(context, MediaAndRadioView.routeName);
+      }),
       CampCategory(text: 'محفوظات', image: Assets.imagesPrayers, onTap: (){
         Navigator.pushNamed(context, SaversView.routeName);
       }),
