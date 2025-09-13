@@ -5,8 +5,11 @@ import 'package:efraho/features/camp/presentation/views/camp_view.dart';
 import 'package:efraho/features/camp/presentation/views/competition_view.dart';
 import 'package:efraho/features/camp/presentation/views/media_and_radio_view.dart';
 import 'package:efraho/features/camp/presentation/views/night_prayers_view.dart';
+import 'package:efraho/features/camp/presentation/views/party_view.dart';
+import 'package:efraho/features/camp/presentation/views/praise_and_mass_view.dart';
 import 'package:efraho/features/camp/presentation/views/savers_view.dart';
 import 'package:efraho/features/camp/presentation/views/vibes_view.dart';
+import 'package:efraho/features/camp/presentation/views/workshop_view.dart';
 import 'package:efraho/features/contact/presentation/views/contact_view.dart';
 import 'package:efraho/features/program/presentation/views/program_view.dart';
 import 'package:efraho/features/slogan/presentation/views/slogan_view.dart';
@@ -71,6 +74,9 @@ class Efraho extends StatelessWidget {
         BibleStudyView.routeName:(context) => const BibleStudyView(),
         CarolView.routeName:(context) => const CarolView(),
         MediaAndRadioView.routeName:(context) => const MediaAndRadioView(),
+        PraiseAndMassView.routeName:(context) => const PraiseAndMassView(),
+        PartyView.routeName:(context) => const PartyView(),
+        WorkshopView.routeName:(context) => const WorkshopView(),
          },
       home: SplashView(),
     );
