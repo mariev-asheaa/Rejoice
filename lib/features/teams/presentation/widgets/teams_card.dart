@@ -29,7 +29,6 @@ class TeamsCard extends StatelessWidget {
                     teamModel.text,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
-                      color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,

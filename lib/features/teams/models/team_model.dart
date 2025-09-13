@@ -35,16 +35,16 @@ class TeamModel {
     switch (colorName) {
       case "red":
         return Colors.red;
-      case "blue":
-        return Colors.blue;
-      case "yellow":
-        return Colors.yellow;
       case "purple":
         return Colors.purple;
+      case "yellow":
+        return Colors.yellow;
       case "orange":
         return Colors.orange;
-      case "green":
-        return Colors.green;
+      case "white":
+        return Colors.white;
+      case "pink":
+        return Colors.pink;
       default:
         return Colors.grey;
     }

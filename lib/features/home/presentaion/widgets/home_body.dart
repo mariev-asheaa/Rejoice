@@ -98,18 +98,18 @@ class _HomeBodyState extends State<HomeBody> {
             ),
           ),
 
-          Positioned(
-              bottom: 0,
-              child: ElevatedButton(
-            onPressed: () async {
-              await fireStoreService.addConferenceData();
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text("تم رفع بيانات المؤتمر بنجاح")),
-              );
-            },
-            child: const Text("رفع بيانات المؤتمر"),
-          )
-          )
+          // Positioned(
+          //     bottom: 0,
+          //     child: ElevatedButton(
+          //   onPressed: () async {
+          //     await fireStoreService.addConferenceData();
+          //     ScaffoldMessenger.of(context).showSnackBar(
+          //       const SnackBar(content: Text("تم رفع بيانات المؤتمر بنجاح")),
+          //     );
+          //   },
+          //   child: const Text("رفع بيانات المؤتمر"),
+          // )
+          // )
         ],
       ),
     );

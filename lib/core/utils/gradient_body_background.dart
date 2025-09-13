@@ -17,7 +17,7 @@ final String arabicText;
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(30),
+          padding: const EdgeInsets.all(40),
           child: SingleChildScrollView(
             child: Center(
               child: Text(
